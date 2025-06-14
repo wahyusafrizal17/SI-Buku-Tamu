@@ -20,7 +20,7 @@ class UsersTableSeeder extends Seeder
 
         $data = [
             ['name'=>'Super Admin',    'email'=>'superadmin@gmail.com',  'password'=> $password, 'level' => 'super'],
-            ['name'=>'Wahyu Safrizal', 'email'=>'wahyusafrizal174@gmail.com', 'password'=> $password, 'level' => 'guest'],
+            ['name'=>'Petugas', 'email'=>'petugas@gmail.com', 'password'=> $password, 'level' => 'guest'],
         ];
 
         User::insert($data);

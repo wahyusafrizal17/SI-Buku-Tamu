@@ -10,7 +10,7 @@
     <meta name="description" content="Vuexy admin is super flexible, powerful, clean &amp; modern responsive bootstrap 4 admin template with unlimited possibilities.">
     <meta name="keywords" content="admin template, Vuexy admin template, dashboard template, flat admin template, responsive admin template, web app">
     <meta name="author" content="PIXINVENT">
-    <title>LOGIN - MADRASAH IBTIDAIYAH NURUL IHSAN II</title>
+    <title>LOGIN - BUKU TAMU ONLINE PLN UP3 JATINEGARA</title>
     <link rel="apple-touch-icon" href="{{ asset('website/images/logo.png') }}">
     <link rel="shortcut icon" type="image/png" href="{{ asset('website/images/logo.png') }}">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500;1,600" rel="stylesheet">
@@ -38,16 +38,16 @@
             <div class="content-body">
                 <div class="auth-wrapper auth-cover">
                     <div class="auth-inner row m-0">
-                        <div class="d-none d-lg-flex col-lg-8 align-items-center p-5">
-                            <div class="w-100 d-lg-flex align-items-center justify-content-center px-5"><img class="img-fluid" src="../../../app-assets/images/pages/login-v2.svg" alt="Login V2" /></div>
+                        <div class="d-none d-lg-flex col-lg-8 align-items-center p-5" style="background-image: url('{{ asset('app-assets/images/login.jpg') }}');background-size: cover;">
+                            {{-- <div class="w-100 d-lg-flex align-items-center justify-content-center px-5"><img class="img-fluid" src="../../../app-assets/images/pages/login-v2.svg" alt="Login V2" /></div> --}}
                         </div>
                         <div class="d-flex col-lg-4 align-items-center auth-bg px-2 p-lg-5">
                             <div class="col-12 col-sm-8 col-md-6 col-lg-12 px-xl-2 mx-auto">
                                 <div class="text-center">
                                     <img src="{{ asset('website/images/logo.png') }}" alt="" width="60%">
                                 </div>
-                                {{-- <h2 class="card-title fw-bold mb-1">INGENIUM! 👋</h2> --}}
-                                {{-- <p class="card-text mb-2 text-center">Silahkan login</p> --}}
+                                <h2 class="card-title fw-bold mb-1 text-center">SELAMAT DATANG DI PLN UP3 JATINEGARA</h2>
+                                <p class="card-text mb-2 text-center">BUKU TAMU ONLINE PLN UP3 JATINEGARA</p>
                                 <form method="POST" action="{{ route('login') }}">
                                     @csrf
                                     <div class="mb-1">
