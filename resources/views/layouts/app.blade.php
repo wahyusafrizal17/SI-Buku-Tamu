@@ -8,7 +8,7 @@
         <meta name="description" content="TEDC ChatDoc AI">
         <meta name="keywords" content="Tedc, Chat Document, AI">
         <meta name="author" content="PIXINVENT">
-        <title>TEDC ChatDoc AI</title>
+        <title>PLN UP3 JATINEGARA</title>
         <link rel="apple-touch-icon" href="{{ asset('app-assets/images/tedc.png') }}">
         <link rel="shortcut icon" type="image/png" href="{{ asset('app-assets/images/tedc.png') }}">
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500;1,600" rel="stylesheet">
@@ -28,6 +28,13 @@
     <body class="vertical-layout vertical-menu-modern  navbar-floating footer-static  " data-open="click" data-menu="vertical-menu-modern" data-col="">
         <nav class="header-navbar navbar navbar-expand-lg align-items-center floating-nav navbar-light navbar-shadow container-xxl">
             <div class="navbar-container d-flex content">
+                <ul class="nav navbar-nav me-auto">
+                    <li class="nav-item mobile-menu d-xl-none">
+                        <a class="nav-link nav-menu-main menu-toggle hidden-xs" href="#">
+                            <i class="ficon" data-feather="menu"></i>
+                        </a>
+                    </li>
+                </ul>
                 <ul class="nav navbar-nav align-items-center ms-auto">
                     <li class="nav-item dropdown dropdown-user">
                         <a class="nav-link dropdown-toggle dropdown-user-link" id="dropdown-user" href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

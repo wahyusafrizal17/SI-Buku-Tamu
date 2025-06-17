@@ -41,13 +41,6 @@ class UsersController extends Controller
     public function store(StoreRequest $request)
     {
         $input = $request->all();
-        if ($request->hasFile('foto')) {
-            $documentName = strtolower(str_replace(' ', '_', $request->name));
-            $fileName = $documentName . '_foto_' . date('YmdHis') . '.png';
-            $path = public_path('foto');
-            $request->file('foto')->move($path, $fileName);
-            $input['foto'] = $fileName;
-        }
         $input['password'] = Hash::make($request->password);
         User::create($input);
 
@@ -89,18 +82,13 @@ class UsersController extends Controller
     {
         $model = User::find($id);
         $input = $request->all();
-        if ($request->hasFile('foto')) {
-            $documentName = strtolower(str_replace(' ', '_', $request->name));
-            $fileName = $documentName . '_foto_' . date('YmdHis') . '.png';
-            $path = public_path('foto');
-            $request->file('foto')->move($path, $fileName);
-            $input['foto'] = $fileName;
+
+        if ($request->filled('password')) {
+            $input['password'] = Hash::make($request->password);
+        } else {
+            unset($input['password']); // ⬅️ Hapus jika kosong
         }
-        if($request->password != '')
-        {
-        $input['password'] = Hash::make($request->password);
-        }
-        
+
         $model->update($input);
 
         alert()->success('Data berhasil diubah', 'Berhasil');
