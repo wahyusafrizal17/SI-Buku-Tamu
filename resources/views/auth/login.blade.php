@@ -46,7 +46,7 @@
                                 <div class="text-center">
                                     <img src="{{ asset('website/images/logo.png') }}" alt="" width="60%">
                                 </div>
-                                <h2 class="card-title fw-bold mb-1 text-center">SELAMAT DATANG DI PLN UP3 JATINEGARA</h2>
+                                <h2 class="card-title fw-bold mb-1 text-center">SELAMAT DATANG <br> DI <br> PLN UP3 JATINEGARA</h2>
                                 <p class="card-text mb-2 text-center">BUKU TAMU ONLINE PLN UP3 JATINEGARA</p>
                                 <form method="POST" action="{{ route('login') }}">
                                     @csrf
@@ -81,6 +81,10 @@
                                     </div>
                                     <button type="submit" class="btn btn-primary w-100" tabindex="4">Sign in</button>
                                 </form>
+                                <div class="text-center mt-5">
+                                    <h3>VISITOR MANAGEMENT SYSTEM</h3>
+                                    <p>DIGITALISASI PENGELOLAAN KEAMANAN</p>
+                                </div>
                             </div>
                         </div>
                     </div>

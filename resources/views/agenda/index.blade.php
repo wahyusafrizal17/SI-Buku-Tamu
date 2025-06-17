@@ -45,8 +45,10 @@
                                           <th>Nama PT</th>
                                           <th>Jenis Pekerjaan</th>
                                           <th>Jumlah Pekerja</th>
-                                          <th>Tanggal</th>
                                           <th>Foto KTP</th>
+                                          <th>Tanggal</th>
+                                          <th>Jam Masuk</th>
+                                          <th>Jam Keluar</th>
                                           <th style="width: 20%" class="text-center">Action</th>
                                        </tr>
                                     </thead>
@@ -58,6 +60,8 @@
                                           <td>{{ $row->jenis_pekerjaan }}</td>
                                           <td>{{ $row->jumlah_pekerja }}</td>
                                           <td>{{ $row->tanggal }}</td>
+                                          <td>{{ $row->jam_masuk }}</td>
+                                          <td>{{ $row->jam_keluar }}</td>
                                           <td><img src="{{ asset('agenda/'.$row->foto_ktp) }}" alt="" width="50%"></td>
                                           {{-- <td><img src="{{ asset('banner/'.$row->banner) }}" alt="" width="50%"></td> --}}
                                          <td class="text-center">

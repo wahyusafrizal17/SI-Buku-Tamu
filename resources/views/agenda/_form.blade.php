@@ -25,6 +25,18 @@
     </div>
 
     <div class="form-group mb-1">
+        <label>Jam Masuk</label>
+        {{ Form::time('jam_masuk',null,['class'=>'form-control'])}}
+        @if ($errors->has('jam_masuk')) <span class="help-block" style="color:red">{{ $errors->first('jam_masuk') }}</span> @endif
+    </div>
+
+    <div class="form-group mb-1">
+        <label>Jam Keluar</label>
+        {{ Form::time('jam_keluar',null,['class'=>'form-control'])}}
+        @if ($errors->has('jam_keluar')) <span class="help-block" style="color:red">{{ $errors->first('jam_keluar') }}</span> @endif
+    </div>
+
+    <div class="form-group mb-1">
       <label>Foto Ktp</label>
       {{ Form::file('foto_ktp',['class'=>'form-control'])}}
       @if ($errors->has('foto_ktp')) <span class="help-block" style="color:red">{{ $errors->first('foto_ktp') }}</span> @endif

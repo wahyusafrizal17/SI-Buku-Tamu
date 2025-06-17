@@ -20,6 +20,8 @@ return new class extends Migration
             $table->string('jumlah_pekerja');
             $table->string('tanggal');
             $table->string('foto_ktp');
+            $table->string('jam_masuk');
+            $table->string('jam_keluar');
             $table->timestamps();
         });
     }

@@ -43,21 +43,21 @@ class TamuController extends Controller
         $input = $request->all();
         if($request->hasFile('foto_tamu')){
             $File = 'foto_tamu_' . date('Ymdhis').'.png';
-            $Path = base_path().'/'.'public'.'/tamu';
+            $Path = base_path().'/'.'public'.'/dokumen-tamu';
             $request->file('foto_tamu')->move($Path, $File);
 
             $input['foto_tamu'] = $File;
         }
         if($request->hasFile('foto_ktp')){
             $File = 'foto_ktp_' . date('Ymdhis').'.png';
-            $Path = base_path().'/'.'public'.'/tamu';
+            $Path = base_path().'/'.'public'.'/dokumen-tamu';
             $request->file('foto_ktp')->move($Path, $File);
 
             $input['foto_ktp'] = $File;
         }
         if($request->hasFile('foto_plat_nomor')){
             $File = 'foto_plat_nomor_' . date('Ymdhis').'.png';
-            $Path = base_path().'/'.'public'.'/tamu';
+            $Path = base_path().'/'.'public'.'/dokumen-tamu';
             $request->file('foto_plat_nomor')->move($Path, $File);
 
             $input['foto_plat_nomor'] = $File;
@@ -104,21 +104,21 @@ class TamuController extends Controller
         $input = $request->all();
         if($request->hasFile('foto_tamu')){
             $File = 'foto_tamu_' . date('Ymdhis').'.png';
-            $Path = base_path().'/'.'public'.'/tamu';
+            $Path = base_path().'/'.'public'.'/dokumen-tamu';
             $request->file('foto_tamu')->move($Path, $File);
 
             $input['foto_tamu'] = $File;
         }
         if($request->hasFile('foto_ktp')){
             $File = 'foto_ktp_' . date('Ymdhis').'.png';
-            $Path = base_path().'/'.'public'.'/tamu';
+            $Path = base_path().'/'.'public'.'/dokumen-tamu';
             $request->file('foto_ktp')->move($Path, $File);
 
             $input['foto_ktp'] = $File;
         }
         if($request->hasFile('foto_plat_nomor')){
             $File = 'foto_plat_nomor_' . date('Ymdhis').'.png';
-            $Path = base_path().'/'.'public'.'/tamu';
+            $Path = base_path().'/'.'public'.'/dokumen-tamu';
             $request->file('foto_plat_nomor')->move($Path, $File);
 
             $input['foto_plat_nomor'] = $File;

@@ -96,12 +96,14 @@
                             <span class="menu-title text-truncate" data-i18n="Modal Examples">Ekpedisi</span>
                         </a>
                     </li>
+                    @if(Auth::user()->level == 'super')
                     <li class="nav-item {!!(Request::is('users*')) ? ' active' : '' !!}">
                         <a class="d-flex align-items-center" href="{{ route('users.index') }}">
                             <i data-feather="users"></i>
                             <span class="menu-title text-truncate" data-i18n="Modal Examples">Pengguna</span>
                         </a>
                     </li>
+                    @endif
                     {{-- <li class=" nav-item">
                         <a class="d-flex align-items-center" href="#">
                             <i data-feather="user"></i>

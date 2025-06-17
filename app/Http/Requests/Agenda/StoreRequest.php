@@ -29,6 +29,8 @@ class StoreRequest extends FormRequest
             'jumlah_pekerja'  => 'required',
             'tanggal'         => 'required',
             'foto_ktp'        => 'required',
+            'jam_masuk'       => 'required',
+            'jam_keluar'      => 'required',
         ];
     }
 
@@ -40,6 +42,8 @@ class StoreRequest extends FormRequest
             'jumlah_pekerja.required'  => 'Jumlah pekerja tidak boleh kosong',
             'tanggal.required'         => 'Tanggal tidak boleh kosong',
             'foto_ktp.required'        => 'Foto KTP tidak boleh kosong',
+            'jam_masuk.required'       => 'Jam masuk tidak boleh kosong',
+            'jam_keluar.required'      => 'Jam keluar tidak boleh kosong',
         ];
     }
 

@@ -71,6 +71,17 @@
                                 <div class="d-flex flex-row meetings">
                                     <div class="avatar bg-light-primary rounded me-1">
                                         <div class="avatar-content">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar avatar-icon font-medium-3"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                                        </div>
+                                    </div>
+                                    <div class="content-body">
+                                        <h6 class="mb-0">{{ \Carbon\Carbon::parse($row->created_at)->translatedFormat('d F Y') }}</h6>
+                                        <small>Tanggal</small>
+                                    </div>
+                                </div>
+                                <div class="d-flex flex-row meetings">
+                                    <div class="avatar bg-light-primary rounded me-1">
+                                        <div class="avatar-content">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-map-pin avatar-icon font-medium-3"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
                                         </div>
                                     </div>
@@ -81,13 +92,19 @@
                                 </div>
                                 <div class="row mt-2">
                                     <div class="col-md-4">
-                                        <a href="{{ asset('dokumen/'.$row->foto_tamu) }}" target="_blank" class="btn btn-primary btn-sm"><i data-feather='download'></i> TAMU</a>
+                                        <img src="{{ asset('dokumen-tamu/'.$row->foto_tamu) }}" alt="" width="100%">
+                                        <label>Foto Tamu</label>
+                                        {{-- <a href="{{ asset('dokumen/'.$row->foto_tamu) }}" target="_blank" class="btn btn-primary btn-sm"><i data-feather='download'></i> TAMU</a> --}}
                                     </div>
                                     <div class="col-md-4">
-                                        <a href="{{ asset('dokumen/'.$row->foto_ktp) }}" target="_blank" class="btn btn-primary btn-sm"><i data-feather='download'></i> KTP</a>
+                                        <img src="{{ asset('dokumen-tamu/'.$row->foto_ktp) }}" alt="" width="100%">
+                                        <label>Foto KTP</label>
+                                        {{-- <a href="{{ asset('dokumen/'.$row->foto_ktp) }}" target="_blank" class="btn btn-primary btn-sm"><i data-feather='download'></i> KTP</a> --}}
                                     </div>
                                     <div class="col-md-4">
-                                        <a href="{{ asset('dokumen/'.$row->foto_plat_nomor) }}" target="_blank" class="btn btn-primary btn-sm"><i data-feather='download'></i> PLAT</a>
+                                        <img src="{{ asset('dokumen-tamu/'.$row->foto_plat_nomor) }}" alt="" width="100%">
+                                        <label>Foto Plat Nomor</label>
+                                        {{-- <a href="{{ asset('dokumen/'.$row->foto_plat_nomor) }}" target="_blank" class="btn btn-primary btn-sm"><i data-feather='download'></i> PLAT</a> --}}
                                     </div>
                                 </div>
                             </div>

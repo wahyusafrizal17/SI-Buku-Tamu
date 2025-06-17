@@ -11,5 +11,5 @@ class Agenda extends Model
 
     protected $table = 'agenda';
 
-    protected $fillable = ['nama_pt', 'jenis_pekerjaan', 'jumlah_pekerja', 'tanggal', 'foto_ktp'];
+    protected $fillable = ['nama_pt', 'jenis_pekerjaan', 'jumlah_pekerja', 'tanggal', 'foto_ktp', 'jam_masuk', 'jam_keluar'];
 }

@@ -18,10 +18,27 @@
         @if ($errors->has('alamat')) <span class="help-block" style="color:red">{{ $errors->first('alamat') }}</span> @endif
     </div>
 
+    @php
+        $options = [
+            'Keuangan' => 'Keuangan',
+            'Pemasaran' => 'Pemasaran',
+            'Niaga' => 'Niaga',
+            'Konstruksi' => 'Konstruksi',
+            'Jaringan' => 'Jaringan',
+            'TE' => 'TE',
+            'Pengadaan' => 'Pengadaan',
+            'Perencanaan' => 'Perencanaan',
+            'K3' => 'K3',
+        ];
+        asort($options); // Mengurutkan berdasarkan value (abjad)
+    @endphp
+
     <div class="form-group mb-1">
         <label>Keperluan / Bidang Tujuan</label>
-        {{ Form::select('keperluan', ['Keuangan' => 'Keuangan', 'Pemasaran' => 'Pemasaran', 'Niaga' => 'Niaga', 'Konstruksi' => 'Konstruksi', 'Jaringan' => 'Jaringan', 'TE' => 'TE', 'Pengadaan' => 'Pengadaan', 'Perencanaan' => 'Perencanaan', 'K3' => 'K3'], null, ['class' => 'form-control']) }}
-        @if ($errors->has('alamat')) <span class="help-block" style="color:red">{{ $errors->first('alamat') }}</span> @endif
+        {{ Form::select('keperluan', $options, null, ['class' => 'form-control']) }}
+        @if ($errors->has('alamat'))
+            <span class="help-block" style="color:red">{{ $errors->first('alamat') }}</span>
+        @endif
     </div>
 
     <div class="form-group mb-1">
