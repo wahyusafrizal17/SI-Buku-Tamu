@@ -6,6 +6,9 @@ use App\Models\Agenda;
 use Illuminate\Http\Request;
 use App\Http\Requests\Agenda\StoreRequest;
 use App\Http\Requests\Agenda\UpdateRequest;
+use App\Exports\AgendaExport;
+use Maatwebsite\Excel\Facades\Excel;
+use Barryvdh\DomPDF\Facade\Pdf; 
 
 class AgendaController extends Controller
 {
@@ -122,5 +125,17 @@ class AgendaController extends Controller
         $category->delete();
 
         return 'success';
+    }
+
+    public function excel()
+    {
+        return Excel::download(new AgendaExport, 'Agenda.xlsx');
+    }
+
+    public function pdf()
+    {
+        $data['model'] = Agenda::all();
+        $pdf = PDF::loadView('agenda.pdf', $data);
+        return $pdf->stream('Agenda.pdf');
     }
 }

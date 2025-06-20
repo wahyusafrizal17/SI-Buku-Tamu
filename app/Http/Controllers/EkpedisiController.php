@@ -6,6 +6,9 @@ use Illuminate\Http\Request;
 use App\Http\Requests\Ekpedisi\StoreRequest;
 use App\Http\Requests\Ekpedisi\UpdateRequest;
 use App\Models\Ekpedisi;
+use App\Exports\EkpedisiExport;
+use Maatwebsite\Excel\Facades\Excel;
+use Barryvdh\DomPDF\Facade\Pdf; 
 
 class EkpedisiController extends Controller
 {
@@ -122,5 +125,17 @@ class EkpedisiController extends Controller
         $category->delete();
 
         return 'success';
+    }
+
+    public function excel()
+    {
+        return Excel::download(new EkpedisiExport, 'Ekpedisi.xlsx');
+    }
+
+    public function pdf()
+    {
+        $data['model'] = Ekpedisi::all();
+        $pdf = PDF::loadView('ekpedisi.pdf', $data);
+        return $pdf->stream('Ekpedisi.pdf');
     }
 }

@@ -38,7 +38,7 @@
             <div class="content-body">
                 <div class="auth-wrapper auth-cover">
                     <div class="auth-inner row m-0">
-                        <div class="d-none d-lg-flex col-lg-8 align-items-center p-5" style="background-image: url('{{ asset('app-assets/images/login.jpg') }}');background-size: cover;">
+                        <div class="d-none d-lg-flex col-lg-8 align-items-center p-5" style="background-image: url('{{ asset('app-assets/images/login-2.jpeg') }}');background-size: cover;background-position: -100px center">
                             {{-- <div class="w-100 d-lg-flex align-items-center justify-content-center px-5"><img class="img-fluid" src="../../../app-assets/images/pages/login-v2.svg" alt="Login V2" /></div> --}}
                         </div>
                         <div class="d-flex col-lg-4 align-items-center auth-bg px-2 p-lg-5">
@@ -81,9 +81,9 @@
                                     </div>
                                     <button type="submit" class="btn btn-primary w-100" tabindex="4">Sign in</button>
                                 </form>
-                                <div class="text-center mt-5">
-                                    <h3>VISITOR MANAGEMENT SYSTEM</h3>
-                                    <p>DIGITALISASI PENGELOLAAN KEAMANAN</p>
+                                <div class="text-center" style="margin-top: 150px">
+                                    <p class="card-text text-center" style="line-height: 0px">BUKUVISITOR MANAGEMENT SYSTEM</p>
+                                    <label class="form-label" style="margin-top: -10px">DIGITALISASI PENGELOLAAN KEAMANAN</label>
                                 </div>
                             </div>
                         </div>

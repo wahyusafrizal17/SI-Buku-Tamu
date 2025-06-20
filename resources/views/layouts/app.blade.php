@@ -5,12 +5,12 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=0,minimal-ui">
-        <meta name="description" content="TEDC ChatDoc AI">
-        <meta name="keywords" content="Tedc, Chat Document, AI">
+        <meta name="description" content="PLN UP3 JATINEGARA">
+        <meta name="keywords" content="PLN UP3 JATINEGARA">
         <meta name="author" content="PIXINVENT">
         <title>PLN UP3 JATINEGARA</title>
-        <link rel="apple-touch-icon" href="{{ asset('app-assets/images/tedc.png') }}">
-        <link rel="shortcut icon" type="image/png" href="{{ asset('app-assets/images/tedc.png') }}">
+        <link rel="apple-touch-icon" href="{{ asset('app-assets/images/logo-pln.png') }}">
+        <link rel="shortcut icon" type="image/png" href="{{ asset('app-assets/images/logo-pln.png') }}">
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500;1,600" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="{{ asset('app-assets/vendors/css/vendors.min.css') }}">
         <link rel="stylesheet" type="text/css" href="{{ asset('app-assets/vendors/css/forms/select/select2.min.css') }}">
@@ -64,8 +64,8 @@
                     <li class="nav-item me-auto">
                         <a class="navbar-brand" href="/">
                             <span class="brand-logo">
-                                <img src="{{ asset('website/images/logo.png') }}" alt=""></span>
-                                <h2 class="brand-text mb-0">SEMETA</h2>
+                                <img src="{{ asset('app-assets/images/logo-pln.png') }}" alt="" style="width: 85%;"></span>
+                                <h2 class="brand-text mb-0" style="font-size: 16px;margin-left: -16px;color: #006699;">UP3 JATINEGARA</h2>
                             </a>
                     </li>
                     <li class="nav-item nav-toggle">
@@ -79,6 +79,12 @@
             <div class="shadow-bottom"></div>
             <div class="main-menu-content">
                 <ul class="navigation navigation-main" id="main-menu-navigation" data-menu="menu-navigation">
+                    <li class="nav-item {!!(Request::is('/*')) ? ' active' : '' !!}">
+                        <a class="d-flex align-items-center" href="/">
+                            <i data-feather='home'></i>
+                            <span class="menu-title text-truncate" data-i18n="Modal Examples">Home</span>
+                        </a>
+                    </li>
                     <li class="nav-item {!!(Request::is('tamu*')) ? ' active' : '' !!}">
                         <a class="d-flex align-items-center" href="{{ route('tamu.index') }}">
                             <i data-feather='user-check'></i>
@@ -103,11 +109,11 @@
                             <span class="menu-title text-truncate" data-i18n="Modal Examples">Ekpedisi</span>
                         </a>
                     </li>
-                    @if(Auth::user()->level == 'super')
+                    @if(Auth::user()->level == 'Admin')
                     <li class="nav-item {!!(Request::is('users*')) ? ' active' : '' !!}">
                         <a class="d-flex align-items-center" href="{{ route('users.index') }}">
-                            <i data-feather="users"></i>
-                            <span class="menu-title text-truncate" data-i18n="Modal Examples">Pengguna</span>
+                            <i data-feather="settings"></i>
+                            <span class="menu-title text-truncate" data-i18n="Modal Examples">Pengaturan</span>
                         </a>
                     </li>
                     @endif
@@ -154,10 +160,7 @@
         <div class="drag-target"></div>
         <footer class="footer footer-static footer-light">
             <p class="clearfix mb-0">
-                <span class="float-md-start d-block d-md-inline-block mt-25">COPYRIGHT &copy; 2021 <a class="ms-25" href="https://1.envato.market/pixinvent_portfolio" target="_blank">Pixinvent</a>
-                    <span class="d-none d-sm-inline-block">, All rights Reserved</span>
-                </span>
-                <span class="float-md-end d-none d-md-block">Hand-crafted & Made with <i data-feather="heart"></i>
+                <span class="float-md-start d-block d-md-inline-block mt-25">COPYRIGHT &copy; {{date('Y')}} by PLN UP3 JATINEGARA
                 </span>
             </p>
         </footer>

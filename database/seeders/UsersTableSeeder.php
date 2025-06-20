@@ -19,8 +19,8 @@ class UsersTableSeeder extends Seeder
         $password = Hash::make('password');
 
         $data = [
-            ['name'=>'Super Admin',    'email'=>'superadmin@gmail.com',  'password'=> $password, 'level' => 'super'],
-            ['name'=>'Petugas', 'email'=>'petugas@gmail.com', 'password'=> $password, 'level' => 'guest'],
+            ['name'=>'Super Admin',    'email'=>'superadmin@gmail.com',  'password'=> $password, 'level' => 'Admin'],
+            ['name'=>'Petugas', 'email'=>'petugas@gmail.com', 'password'=> $password, 'level' => 'Petugas'],
         ];
 
         User::insert($data);

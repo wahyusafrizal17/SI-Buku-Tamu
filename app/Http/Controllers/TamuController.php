@@ -6,6 +6,9 @@ use Illuminate\Http\Request;
 use App\Models\Tamu;
 use App\Http\Requests\Tamu\StoreRequest;
 use App\Http\Requests\Tamu\UpdateRequest;
+use App\Exports\TamuExport;
+use Maatwebsite\Excel\Facades\Excel;
+use Barryvdh\DomPDF\Facade\Pdf; 
 
 class TamuController extends Controller
 {
@@ -150,5 +153,17 @@ class TamuController extends Controller
         $category->delete();
 
         return 'success';
+    }
+
+    public function excel()
+    {
+        return Excel::download(new TamuExport, 'Tamu.xlsx');
+    }
+
+    public function pdf()
+    {
+        $data['model'] = Tamu::all();
+        $pdf = PDF::loadView('tamu.pdf', $data);
+        return $pdf->stream('Tamu.pdf');
     }
 }

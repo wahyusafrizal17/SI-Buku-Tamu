@@ -32,9 +32,17 @@
                         <div class="card">
                            <div class="card-header">
                               <h4 class="card-title">Data Ekpedisi</h4>
-                              <a href="{{ route('ekpedisi-surat.create') }}" class="btn btn-primary btn-sm">
-                                 <i data-feather='plus'></i> Tambah
-                              </a>
+                              <div class="d-flex gap-1">
+                                 <a href="{{ route('ekpedisi-surat.pdf') }}" target="_blank" class="btn btn-danger btn-sm">
+                                    <i data-feather='file'></i> Pdf
+                                 </a>
+                                 <a href="{{ route('ekpedisi-surat.excel') }}" target="_blank" class="btn btn-info btn-sm">
+                                    <i data-feather='file'></i> Excel
+                                 </a>
+                                 <a href="{{ route('ekpedisi-surat.create') }}" class="btn btn-primary btn-sm">
+                                    <i data-feather='plus'></i> Tambah
+                                 </a>
+                              </div>
                           </div>
                            <div class="card-body">
                               <div class="table-responsive">

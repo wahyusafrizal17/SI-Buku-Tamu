@@ -32,9 +32,17 @@
                         <div class="card">
                            <div class="card-header">
                               <h4 class="card-title">Data Agenda</h4>
-                              <a href="{{ route('agenda-dan-kegiatan.create') }}" class="btn btn-primary btn-sm">
-                                 <i data-feather='plus'></i> Tambah
-                              </a>
+                              <div class="d-flex gap-1">
+                                 <a href="{{ route('agenda-dan-kegiatan.pdf') }}" target="_blank" class="btn btn-danger btn-sm">
+                                    <i data-feather='file'></i> Pdf
+                                 </a>
+                                 <a href="{{ route('agenda-dan-kegiatan.excel') }}" target="_blank" class="btn btn-info btn-sm">
+                                    <i data-feather='file'></i> Excel
+                                 </a>
+                                 <a href="{{ route('agenda-dan-kegiatan.create') }}" class="btn btn-primary btn-sm">
+                                    <i data-feather='plus'></i> Tambah
+                                 </a>
+                              </div>
                           </div>
                            <div class="card-body">
                               <div class="table-responsive">
@@ -45,10 +53,10 @@
                                           <th>Nama PT</th>
                                           <th>Jenis Pekerjaan</th>
                                           <th>Jumlah Pekerja</th>
-                                          <th>Foto KTP</th>
                                           <th>Tanggal</th>
                                           <th>Jam Masuk</th>
                                           <th>Jam Keluar</th>
+                                          <th>Foto KTP</th>
                                           <th style="width: 20%" class="text-center">Action</th>
                                        </tr>
                                     </thead>
