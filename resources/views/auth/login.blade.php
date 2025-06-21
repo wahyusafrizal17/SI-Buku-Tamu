@@ -82,7 +82,7 @@
                                     <button type="submit" class="btn btn-primary w-100" tabindex="4">Sign in</button>
                                 </form>
                                 <div class="text-center" style="margin-top: 150px">
-                                    <p class="card-text text-center" style="line-height: 0px">BUKUVISITOR MANAGEMENT SYSTEM</p>
+                                    <p class="card-text text-center" style="line-height: 0px">VISITOR MANAGEMENT SYSTEM</p>
                                     <label class="form-label" style="margin-top: -10px">DIGITALISASI PENGELOLAAN KEAMANAN</label>
                                 </div>
                             </div>
