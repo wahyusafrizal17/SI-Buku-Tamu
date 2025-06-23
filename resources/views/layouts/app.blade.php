@@ -43,7 +43,7 @@
                                 <span class="user-status">Online</span>
                             </div>
                             <span class="avatar">
-                                <img class="round" src="{{ !empty(Auth::user()->foto) ? asset('foto/'.Auth::user()->foto) : asset('app-assets/images/portrait/small/avatar-s-11.jpg') }}" alt="avatar" height="40" width="40">
+                                <img class="round" src="{{ !empty(Auth::user()->foto) ? asset('profile/'.Auth::user()->foto) : asset('app-assets/images/portrait/small/avatar-s-11.jpg') }}" alt="avatar" height="40" width="40">
                                 <span class="avatar-status-online"></span>
                             </span>
                         </a>

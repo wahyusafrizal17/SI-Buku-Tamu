@@ -42,6 +42,13 @@ class UsersController extends Controller
     {
         $input = $request->all();
         $input['password'] = Hash::make($request->password);
+        if($request->hasFile('foto')){
+            $File = 'foto' . date('Ymdhis').'.png';
+            $Path = base_path().'/'.'public'.'/profile';
+            $request->file('foto')->move($Path, $File);
+
+            $input['foto'] = $File;
+        }
         User::create($input);
 
         alert()->success('Data berhasil disimpan', 'Berhasil');
@@ -87,6 +94,13 @@ class UsersController extends Controller
             $input['password'] = Hash::make($request->password);
         } else {
             unset($input['password']); // ⬅️ Hapus jika kosong
+        }
+        if($request->hasFile('foto')){
+            $File = 'foto' . date('Ymdhis').'.png';
+            $Path = base_path().'/'.'public'.'/profile';
+            $request->file('foto')->move($Path, $File);
+
+            $input['foto'] = $File;
         }
 
         $model->update($input);
