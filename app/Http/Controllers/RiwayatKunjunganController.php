@@ -16,7 +16,7 @@ class RiwayatKunjunganController extends Controller
             $query->whereDate('created_at', $searchTerm);
         }
 
-        $data['model'] = $query->get();
+        $data['model'] = $query->orderBy('created_at', 'desc')->get();
 
         return view('riwayat-kunjungan.index', $data);
     }

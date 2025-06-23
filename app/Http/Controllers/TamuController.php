@@ -20,8 +20,7 @@ class TamuController extends Controller
      */
     public function index()
     {
-        $data['model'] = Tamu::all();
-
+        $data['model'] = Tamu::orderBy('created_at', 'desc')->get();
         return view('tamu.index', $data);
     }
 
